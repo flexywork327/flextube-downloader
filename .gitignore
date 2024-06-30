@@ -1,0 +1,24 @@
+# Python cache files
+__pycache__/
+
+# Python distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+*.venv/
+
+# IDE / editor specific files
+.idea/
+.vscode/
+*.pyc
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Dependency management
+pip-lock.txt
