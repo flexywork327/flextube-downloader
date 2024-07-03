@@ -120,19 +120,27 @@ def get_video_info(url):
 
 
 if __name__ == "__main__":
-    url = input("Enter the YouTube video URL: ")
+    while True:
+        url = input("Enter the YouTube video URL (or 'q' to quit): ")
+        if url.lower() == 'q':
+            break
 
-    # Fetch video information
-    video, video_formats = get_video_info(url)
+        # Fetch video information
+        video, video_formats = get_video_info(url)
 
-    if video and video_formats:
-        # Prompt for quality selection
-        print("\nAvailable video qualities:")
-        for i, format in enumerate(video_formats):
-            print(f"{i + 1}. {format.resolution}")
+        if video and video_formats:
+            # Prompt for quality selection
+            print("\nAvailable video qualities:")
+            for i, format in enumerate(video_formats):
+                print(f"{i + 1}. {format.resolution}")
 
-        quality_option = int(input("Enter the desired quality option number: ")) - 1
+            quality_option = int(input("Enter the desired quality option number: ")) - 1
 
-        download_video(url, quality_option)
-    else:
-        print("Unable to proceed with the download due to the errors mentioned above.")
+            download_video(url, quality_option)
+        else:
+            print("Unable to proceed with the download due to the errors mentioned above.")
+
+        print("\nDo you want to download another video? (y/n)")
+        download_another = input().lower()
+        if download_another != 'y':
+            break

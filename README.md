@@ -4,17 +4,14 @@ Flextube is a simple and easy-to-use Python App for downloading YouTube videos. 
 
 ## Features
 
-- Create new playlists
-- Add videos to playlists
-- Remove videos from playlists
-- List videos in playlists
+- Download YouTube videos in different resolutions.
 
 ## Installation
 
-You can install Flextube using pip:
+Run the following command to install the required packages:
 
 ```bash
-pip install flextube
+pip install pytube
 ```
 
 ## Getting Started
@@ -23,5 +20,5 @@ pip install flextube
 
 ```bash
 
- python -u "c:\Users\felix.asare\PycharmProjects\pytube\main.py"
+ python3 "main.py"
 ```
